@@ -71,6 +71,9 @@ foreach(DataModel item in sqlResult)
 
 - If two queries/initializations are returning same thing, then store in class properties to reuse.
 - Code snippet: [[Lazy initialization]]
+## SQL negation
+- Using `x.IsDeleted == false` is generally better for query translation and index usage in SQL databases than using the negation operator (`!x.IsDeleted`). This can lead to more efficient queries.
+- For in-memory LINQ, both forms are equivalent.
 
 ---
 

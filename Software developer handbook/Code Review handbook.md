@@ -32,6 +32,20 @@ private readonly int _successCount;
 // variable
 int successCount
 ```
+## Null handling
+Even though your business logic state that `accountantId` is mandatory. But don't trust it customer's input, always check null.
+```cs
+// bad 
+if (client.accountantId)
+{
+	// business logic
+}
+// good
+if (client?.accountantId)
+{
+	// business logic
+}
+```
 
 ---
 

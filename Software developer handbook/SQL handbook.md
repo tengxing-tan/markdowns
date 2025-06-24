@@ -40,6 +40,72 @@ SELECT * FROM Sales
 WHERE invoiceDate BETWEEN '05/31/2024' AND '08/31/2024'
 ```
 
+## Duplicate table
+- Copy `inventory.products` to `inventory.beauty_products`
+```sql
+select * into inventory.beauty_products
+from inventory.products
+where category_id = 3
+```
+
+## Transaction
+- ensures that operations are ACID 
+	- Atomic, done operation one a time, or not at all
+	- Consistency
+	- Isolated
+	- Durable
+
+```sql
+BEGIN TRANSACTION
+--INSERT INTO
+
+-- Done operation, you commit/say done 
+COMMIT TRANSACTION
+-- Something wrong, you rollback/say cancel
+ROLLBACK TRANSACTION
+```
+
+## Temporary table
+```sql
+CREATE TEMPORARY TABLE cool_products AS
+SELECT * FROM inventory.products
+```
+
+## Stored procedure
+```sql
+-- CREATE 
+CREATE PROCEDURE [Client].[FE_ClientBatchEdit_ValidateBatchMutation]
+(
+    @_userId INT
+)
+
+AS
+
+SET NOCOUNT ON;
+SET XACT_ABORT ON;
+
+BEGIN
+    SELECT
+        CAST(MAX(
+            CASE 
+                WHEN cc.ClientType = 0 THEN 1 
+                ELSE 0 END) AS BIT) IsAnyNaturalPersonInSelection
+    FROM Client.Clients cc WHERE cc.UserId = @_userId
+END;
+
+-- RUN & SEE THE RESULT
+EXECUTE Client.FE_ClientBatchEdit_ValidateBatchMutation 9 --parameters
+```
+
+## Function
+```sql
+CREATE FUNCTION function_name(parameters)
+RETURNS VARCHAR(20) AS
+BEGIN
+SELECT * FROM products
+RETURN return_value
+END
+```
 
 ## Ranking
 - `RANK` & `DENSE_RANK`

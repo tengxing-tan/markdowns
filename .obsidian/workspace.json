@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Software developer handbook/Code Review handbook.md",
+                "file": "Software developer handbook/SQL handbook.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Code Review handbook"
+              "title": "SQL handbook"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Software developer handbook/Code Review handbook.md",
+                "file": "Software developer handbook/SQL handbook.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Code Review handbook"
+              "title": "Outline of SQL handbook"
             }
           }
         ],
@@ -168,8 +168,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a9356dd1f206784e",
+  "active": "6ea27a66484d0297",
   "lastOpenFiles": [
+    "Software developer handbook/Code Review handbook.md",
     "Software developer handbook/Software engineer handbook.md",
     "Exact/Database/Add columns in the Table.md",
     "Exact/Annual Reporting/Back button.md",
@@ -178,7 +179,6 @@
     "Software developer handbook/Angular handbook.md",
     "Software developer handbook/Azure Developer handbook.md",
     "Software developer handbook/Bug Handling handbook.md",
-    "Software developer handbook/Code Review handbook.md",
     "Software developer handbook/FSR handbook.md",
     "Software developer handbook/git handbook.md",
     "Software developer handbook/JavaScript handbook.md",

@@ -4,24 +4,39 @@
     "type": "split",
     "children": [
       {
-        "id": "baffa75e1c0301d9",
+        "id": "4dbe4a2955a9aa17",
         "type": "tabs",
         "children": [
           {
-            "id": "6ea27a66484d0297",
+            "id": "9dbdfd58075759ae",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Software developer handbook/SQL handbook.md",
+                "file": "Software developer handbook/Angular handbook.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SQL handbook"
+              "title": "Angular handbook"
+            }
+          },
+          {
+            "id": "39fb396b072e924e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Software developer handbook/Angular handbook.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Angular handbook"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -142,13 +157,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Software developer handbook/SQL handbook.md",
+                "file": "Software developer handbook/Angular handbook.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of SQL handbook"
+              "title": "Outline of Angular handbook"
             }
           }
         ],
@@ -168,16 +183,17 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "6ea27a66484d0297",
+  "active": "39fb396b072e924e",
   "lastOpenFiles": [
     "Software developer handbook/Code Review handbook.md",
+    "Software developer handbook/Azure Developer handbook.md",
+    "Software developer handbook/Angular handbook.md",
     "Software developer handbook/Software engineer handbook.md",
+    "Software developer handbook/SQL handbook.md",
     "Exact/Database/Add columns in the Table.md",
     "Exact/Annual Reporting/Back button.md",
     "Software developer handbook/Code snippet/DynamicData.md",
     "Software developer handbook/Code snippet/DataRow.md",
-    "Software developer handbook/Angular handbook.md",
-    "Software developer handbook/Azure Developer handbook.md",
     "Software developer handbook/Bug Handling handbook.md",
     "Software developer handbook/FSR handbook.md",
     "Software developer handbook/git handbook.md",
@@ -202,7 +218,6 @@
     "Exact/My Working Experience/Query Request.md",
     "Exact/My Working Experience/Logic - Copy dossier.md",
     "Exact/My Working Experience/Handle Invitation Client Log.md",
-    "Exact/My Working Experience/EOL Build Script.md",
     "Exact/Practice Management/SharePoint",
     "Exact/Test",
     "Exact/My Working Experience",

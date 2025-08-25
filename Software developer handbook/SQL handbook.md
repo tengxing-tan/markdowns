@@ -133,7 +133,7 @@ END
 - `SOME`, `ANY`
 - `GETDATE`
 - `sp_columns _TableName_` List columns of the table
-- `sp_helpindex _TableName_` List indexes of the table 
+- `sp_helpindex 'Schema.TableName'` List indexes of the table 
 - `sp_helpindexall`
 - `sp_helptext _Programibility/Stored Procedure_` Get SQL function / Stored procedure 
 
@@ -160,4 +160,25 @@ To see if any index defined but does not useful
 ```sql
 select * from sys.dm_db_index_usage_stats
 ```
+
+---
+# Update script
+## Update an index
+
+```sql
+SET XACT_ABORT ON;
+
+BEGIN TRAN
+    IF EXISTS (SELECT name FROM sys.indexes WHERE name = 'IX_Client_Clients_Email_CreationDate')
+    DROP INDEX [IX_Client_Clients_Email_CreationDate] ON [Client].[Clients]
+
+    CREATE NONCLUSTERED INDEX [IX_Client_Clients_Email_CreationDate_ModificationDate] ON [Client].[Clients]
+    (
+        [Email] ASC,
+        [CreationDate] ASC,
+        [ModificationDate] ASC
+    )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+COMMIT TRAN
+```
+
 

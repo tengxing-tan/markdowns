@@ -107,6 +107,14 @@ RETURN return_value
 END
 ```
 
+## Type
+```sql
+CREATE TYPE [TrialBalance].[TVP_TrialBalanceImport_JournalEntryRow] AS TABLE (
+    [JournalEntryId]      INT             NOT NULL,
+    [Debit]               DECIMAL (18, 8) NOT NULL
+);
+```
+
 ## Ranking
 - `RANK` & `DENSE_RANK`
 - `ROW_NUMBER`
@@ -136,6 +144,7 @@ END
 - `sp_helpindex 'Schema.TableName'` List indexes of the table 
 - `sp_helpindexall`
 - `sp_helptext _Programibility/Stored Procedure_` Get SQL function / Stored procedure 
+- `sp_helpconstraint 'Reporting.FinancialStatementStylingTemplates'` List foreign keys
 
 ---
 # MS SQL Studio

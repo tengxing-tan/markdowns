@@ -28,5 +28,7 @@ constructor() {
 - Use implicit type. `(result: boolean) => ()`
 - Avoid custom CSS
 
-## Angular
+## RxJs
 - Use `take(1)` or/and `takeUntil(this.ngUnsubscribe))` to ensure that resources are properly cleaned up and preventing memory leaks.
+- Use `switchMap` if you have multiple levels of nesting / each `.subscribe()` depends on the result of previous one.
+- Use `forJoin` when you would like to combine multiple observables. 

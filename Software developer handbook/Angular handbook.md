@@ -32,3 +32,13 @@ constructor() {
 - Use `take(1)` or/and `takeUntil(this.ngUnsubscribe))` to ensure that resources are properly cleaned up and preventing memory leaks.
 - Use `switchMap` if you have multiple levels of nesting / each `.subscribe()` depends on the result of previous one.
 - Use `forJoin` when you would like to combine multiple observables. 
+
+# Unit test
+Two types of framework
+- Jasmine: Behavior-driven development testing framework
+
+## Jasmine 
+- `describe` is a test suite that groups a series of test case
+- `it` defines a test case
+- `assert` expects the test outcome. 
+

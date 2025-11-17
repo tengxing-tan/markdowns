@@ -134,6 +134,9 @@ CREATE TYPE [TrialBalance].[TVP_TrialBalanceImport_JournalEntryRow] AS TABLE (
 
 ## Others cool Q
 - `UNION ALL` combine result rows of multiple query statement
+	- `ALL` because you want all data even though it is duplicated
+	- Use **`UNION`** when you need to merge results from **different tables or queries** with the same structure.  
+	- Use **`OR`** when filtering rows **within the same table**.
 - `EXCEPT`
 - `INTERSECT`
 - `TOP 10` returns first 10 rows

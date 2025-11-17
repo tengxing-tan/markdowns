@@ -158,7 +158,36 @@ CREATE TYPE [TrialBalance].[TVP_TrialBalanceImport_JournalEntryRow] AS TABLE (
 	- **Read-ahead reads**: Pages read in advance for performance.
 	- **LOB reads**: Large Object (e.g., text, image) reads.
 
+## Selectivity
+When the selectivity >10%, you should consider indexing, else just fine. 
+```sql
+SELECT
+    COUNT(DISTINCT city) * 1.0 / COUNT(*) AS city_selectivity
+FROM customers;
+-- 1.0 to ensure floating-point result
+```
+
 ## Indexing
+Many types here:
+- Clustered index (primary key)
+- Nonclustered index (default index)
+- Covering index (storing SELECT columns in index page, no need to access data page)
+- Composite indexing (indexing on >1 key columns)
+- Unique indexing (uniqueness is a **data integrity rule**)
+
+```sql
+-- Nonclustered is by default, no need to mention
+CREATE INDEX IX_Client_Email ON Client(Email)
+
+-- Composite index: few key columns
+CREATE INDEX IX_Client_Email_Status_Contract ON Client(
+	Email, Status, Contract
+	-- Order of key columns matters: 
+	-- SELECT * FROM Client 
+	-- WHERE Email LIKE 'mail%' AND STATUS = 1 AND Contract = 'Premium' 
+)
+```
+
 **When you want to verify you are actually using the index**
 ```sql
 SET SHOWPLAN_TEXT ON;
@@ -205,7 +234,7 @@ select * from sys.dm_db_index_usage_stats
 ---
 # Update script
 ## Update an index
-
+Trying to add one more column: `ModificationDate`
 ```sql
 SET XACT_ABORT ON;
 

@@ -146,6 +146,15 @@ CREATE TYPE [TrialBalance].[TVP_TrialBalanceImport_JournalEntryRow] AS TABLE (
 - `sp_helptext _Programibility/Stored Procedure_` Get SQL function / Stored procedure 
 - `sp_helpconstraint 'Reporting.FinancialStatementStylingTemplates'` List foreign keys
 
+## Performance tuning
+- `SET STATISTICS IO ON` output information about **logical and physical reads**
+	- **Scan count**: How many times the table/index was accessed.
+	- **Logical reads**: Pages read from the buffer cache (memory).
+	- **Physical reads**: Pages read from disk (slower).
+	- **Read-ahead reads**: Pages read in advance for performance.
+	- **LOB reads**: Large Object (e.g., text, image) reads.
+
+
 ---
 # MS SQL Studio
 - View: if you repeat same SELECT query everyday, create a view for saving time

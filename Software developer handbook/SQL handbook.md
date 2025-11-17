@@ -1,3 +1,6 @@
+> [!NOTE]
+> See outline, no need read all. 
+
 [[SQL Queries box - EOL]]
 **Rule of SQL:** **Normalization**
 

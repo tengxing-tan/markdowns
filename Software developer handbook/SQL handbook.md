@@ -186,6 +186,14 @@ CREATE INDEX IX_Client_Email_Status_Contract ON Client(
 	-- SELECT * FROM Client 
 	-- WHERE Email LIKE 'mail%' AND STATUS = 1 AND Contract = 'Premium' 
 )
+
+-- Covering
+CREATE INDEX IX_Client_Email ON Client(Email)
+INCLUDE (
+	Name, PhoneNo
+	-- To make use:
+	-- SELECT Name, PhoneNo FROM Client WHERE Email like 'example@mail.com'
+)
 ```
 
 **When you want to verify you are actually using the index**

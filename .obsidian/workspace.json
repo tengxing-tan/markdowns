@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Software developer handbook/SQL handbook.md",
+                "file": "Software developer handbook/Indexing Checklist.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SQL handbook"
+              "title": "Indexing Checklist"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Software developer handbook/Code Review handbook.md",
+                "file": "Software developer handbook/Indexing Checklist.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Code Review handbook"
+              "title": "Backlinks for Indexing Checklist"
             }
           },
           {
@@ -142,17 +142,16 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Software developer handbook/SQL handbook.md",
+                "file": "Software developer handbook/Indexing Checklist.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of SQL handbook"
+              "title": "Outline of Indexing Checklist"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -171,8 +170,9 @@
   },
   "active": "138533fd25a7f089",
   "lastOpenFiles": [
-    "Software developer handbook/SQL Queries box - EOL.md",
     "Software developer handbook/SQL handbook.md",
+    "Software developer handbook/Indexing Checklist.md",
+    "Software developer handbook/SQL Queries box - EOL.md",
     "Software developer handbook/Angular unit test - jest.md",
     "Risk estimation.md",
     "Software developer handbook/JavaScript handbook.md",
@@ -188,7 +188,6 @@
     "Software developer handbook/Deep dive/Layered architecture.md",
     "Software developer handbook/Deep dive",
     "Software developer handbook/Web testing.md",
-    "Software developer handbook/Untitled.md",
     "Software developer handbook/Code Review handbook.md",
     "Software developer handbook/Azure Developer handbook.md",
     "Exact/Database/Add columns in the Table.md",

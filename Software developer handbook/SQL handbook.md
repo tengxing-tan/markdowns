@@ -157,6 +157,8 @@ CREATE TYPE [TrialBalance].[TVP_TrialBalanceImport_JournalEntryRow] AS TABLE (
 	- **Physical reads**: Pages read from disk (slower).
 	- **Read-ahead reads**: Pages read in advance for performance.
 	- **LOB reads**: Large Object (e.g., text, image) reads.
+- `DBCSS SHOW_STATISTICS('table_name', 'index_name')`
+	- Density: low density -> few distinct values (no need indexing)
 
 ## Selectivity
 When the selectivity >10%, you should consider indexing, else just fine. 
@@ -168,6 +170,7 @@ FROM customers;
 ```
 
 ## Indexing
+ ☑️ [[Indexing Checklist]]
 Many types here:
 - Clustered index (primary key)
 - Nonclustered index (default index)

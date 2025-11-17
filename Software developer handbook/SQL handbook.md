@@ -149,7 +149,8 @@ CREATE TYPE [TrialBalance].[TVP_TrialBalanceImport_JournalEntryRow] AS TABLE (
 - `sp_helptext _Programibility/Stored Procedure_` Get SQL function / Stored procedure 
 - `sp_helpconstraint 'Reporting.FinancialStatementStylingTemplates'` List foreign keys
 
-## Performance tuning
+---
+# Performance tuning
 - `SET STATISTICS IO ON` output information about **logical and physical reads**
 	- **Scan count**: How many times the table/index was accessed.
 	- **Logical reads**: Pages read from the buffer cache (memory).
@@ -157,6 +158,25 @@ CREATE TYPE [TrialBalance].[TVP_TrialBalanceImport_JournalEntryRow] AS TABLE (
 	- **Read-ahead reads**: Pages read in advance for performance.
 	- **LOB reads**: Large Object (e.g., text, image) reads.
 
+## Indexing
+**When you want to verify you are actually using the index**
+```sql
+SET SHOWPLAN_TEXT ON;
+GO
+-- Your query here
+select top 1 ActiveForAuditPlan from client.clients where ActiveForAuditPlan = 0
+go
+SET SHOWPLAN_TEXT OFF;
+GO
+```
+
+**Filtered index**
+When you nonclustered index, you are only want to check if it is null or specific value:
+```sql
+CREATE NONCLUSTERED INDEX IX_Clients_IsDeleted
+ON Client.Clients(isDeleted)
+WHERE isDeleted = 0;
+```
 
 ---
 # MS SQL Studio

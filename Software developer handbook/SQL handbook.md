@@ -180,6 +180,7 @@ Many types here:
 - Covering index (storing SELECT columns in index page, no need to access data page)
 - Composite indexing (indexing on >1 key columns)
 - Unique indexing (uniqueness is a **data integrity rule**)
+- Order index (efficient for range or sort by latest date: BETWEEN, <, >). Not only point lookup.
 
 ```sql
 -- Nonclustered is by default, no need to mention
@@ -202,7 +203,7 @@ INCLUDE (
 )
 ```
 
-**When you want to verify you are actually using the index**
+When you want to verify you are **actually using** the index
 ```sql
 SET SHOWPLAN_TEXT ON;
 GO
@@ -219,6 +220,18 @@ When you nonclustered index, you are only want to check if it is null or specifi
 CREATE NONCLUSTERED INDEX IX_Clients_IsDeleted
 ON Client.Clients(isDeleted)
 WHERE isDeleted = 0;
+```
+
+Computed column
+```SQL
+-- when you do
+SELECT * FROM Users WHERE LEFT(Name, 1) = 'F' -- This does not use index because LEFT is a function not value
+
+-- of course you can do
+SELECT * FROM Users WHERE Name LIKE 'F%' -- only works for prefix
+
+-- Alternatively, create new column to store that value
+ALTER TABLE Client.Clients ADD FirstLetter as LEFT(Name, 1) PERSISTED
 ```
 
 ---

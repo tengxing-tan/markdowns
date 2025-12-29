@@ -146,6 +146,7 @@ CREATE TYPE [TrialBalance].[TVP_TrialBalanceImport_JournalEntryRow] AS TABLE (
 - `ISNULL` & `COALESCE`
 - `SOME`, `ANY`
 - `GETDATE`
+- Use **TVP** in a stored procedure and then join the **TVF** result with another table
 - `sp_columns _TableName_` List columns of the table
 - `sp_helpindex 'Schema.TableName'` List indexes of the table 
 - `sp_helpindexall`
@@ -210,6 +211,7 @@ GO
 -- Your query here
 select top 1 ActiveForAuditPlan from client.clients where ActiveForAuditPlan = 0
 go
+-- expect your get non/clustered index SEEK (NOT Scan)
 SET SHOWPLAN_TEXT OFF;
 GO
 ```

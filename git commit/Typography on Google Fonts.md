@@ -1,0 +1,2 @@
+- **Pairing Strategy:** A common battle-tested pairing is **Montserrat** for headlines and **Open Sans** or **Lato** for body text.
+- **New Trend:** **Google Sans Flex** and **Stack Sans** are newly released in 2025 and are already gaining rapid adoption for their extreme flexibility.

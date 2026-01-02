@@ -1,0 +1,2 @@
+- It is powerful on memorizing, so you can avoid re-calculation (which is expensive for some cases).
+- **When you know it can be applied?** Comparing two input. Leetcode example: Longest palindromic substring, regex matching

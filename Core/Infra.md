@@ -1,3 +1,7 @@
+## Related Note
+
+- [Side Effects in Coding](Side%20Effects%20in%20Coding.md)
+
 ## Why DB and Application/Web Servers Are Separated
 
 They are separated because they have different responsibilities in a multi-tier architecture.

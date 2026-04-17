@@ -2,7 +2,7 @@
 >[[#Code review best practice]]
 
 
-use route parameters to pass data to a route
+use route parameters to pass data to a route 
 
 - `ActivatedRoute - @angular/core` gets params from URL
 - `HousingService - dev defined` manages data

@@ -1,3 +1,0 @@
-- **Duplicate client code**, then duplicate SharePoint Site ID, thus SharePoint error
-- **Multi attachments** in one single document, this is ExactOnline feature, not support by SharePoint
-- 
